@@ -5,80 +5,243 @@
   font-family: system-ui, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #0b1220;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
-.header {
-  text-align: center;
-  padding: 50px 20px;
+/* NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(11, 18, 32, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 22px;
 }
 
-.header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.nav-left {
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-.header p {
-  opacity: 0.85;
-  max-width: 700px;
-  margin: 0 auto;
+.nav-links {
+  display: flex;
+  gap: 18px;
 }
 
-.links {
-  margin-top: 20px;
-}
-
-.links a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #38bdf8;
+.nav-links a {
+  color: #cbd5e1;
   text-decoration: none;
   font-weight: 600;
+  opacity: 0.9;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  opacity: 1;
+  color: #38bdf8;
 }
 
-.container {
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: #38bdf8;
+  color: #0b1220;
+  border: none;
+}
+
+.ghost {
+  background: transparent;
+  color: #e5e7eb;
+}
+
+/* HERO */
+.hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #7dd3fc;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
   max-width: 900px;
   margin: 0 auto;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.sub {
+  margin-top: 18px;
+  opacity: 0.85;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+.section {
+  margin-top: 45px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.section h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+/* PROJECTS GRID */
+.grid {
+  margin-top: 14px;
   display: grid;
-  gap: 20px;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px;
-  border-radius: 14px;
+  transition: 0.2s;
 }
 
-.card h2 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.35);
 }
 
+.card h3 {
+  margin-bottom: 6px;
+}
+
+.card p {
+  opacity: 0.85;
+}
+
+.card-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.card-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.card-links a:hover {
+  text-decoration: underline;
+}
+
+/* SKILLS */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .skills span {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
+/* CONTACT */
+.contact-box a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 .footer {
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 10px;
   opacity: 0.7;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: 0.6s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }
 

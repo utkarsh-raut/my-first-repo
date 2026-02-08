@@ -7,37 +7,87 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>Utkarsh Raut</h1>
-    <p>MSc Computer Science Student | Learning C, Linux, System Programming</p>
-    <div class="links">
-      <a href="https://github.com/utkarsh-raut" target="_blank">GitHub</a>
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="mailto:yourmail@gmail.com">Email</a>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-left">Utkarsh</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a class="btn" href="resume.pdf" target="_blank">Resume</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="tag">MSc Computer Science Student</p>
+    <h1>
+      Building strong fundamentals in
+      <span class="highlight">C, Linux, and System Programming</span>.
+    </h1>
+
+    <p class="sub">
+      I’m Utkarsh Raut. I’m learning by building real projects and pushing everything on GitHub.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="https://github.com/utkarsh-raut" target="_blank">GitHub</a>
     </div>
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>About Me</h2>
+
+    <!-- ABOUT -->
+    <section class="section reveal" id="about">
+      <h2>About</h2>
       <p>
-        I’m an MSc CS student building strong fundamentals in programming,
-        Linux, and system-level development. I’m working on real projects and
-        learning step-by-step.
+        I’m an MSc CS student focusing on fundamentals: programming, Linux, Git, and system-level development.
+        I’m not just learning theory — I’m building real projects step-by-step and improving daily.
       </p>
     </section>
 
-    <section class="card">
+    <!-- PROJECTS -->
+    <section class="section reveal" id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><b>Portfolio Website</b> — This website (HTML/CSS/JS)</li>
-        <li><b>Upcoming:</b> Toy Assembler Project</li>
-        <li><b>Upcoming:</b> Nokia-style Cricket Web Game</li>
-      </ul>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>My personal portfolio built using HTML, CSS, and JavaScript.</p>
+          <div class="card-links">
+            <a href="https://utkarsh-raut.github.io/my-first-repo/" target="_blank">Live</a>
+            <a href="https://github.com/utkarsh-raut/my-first-repo" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Toy Assembler (Upcoming)</h3>
+          <p>A beginner-friendly assembler project to learn low-level computing.</p>
+          <div class="card-links">
+            <a href="https://github.com/utkarsh-raut" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Nokia Cricket Web Game (Upcoming)</h3>
+          <p>Retro-style cricket game with sound, animations, and local high scores.</p>
+          <div class="card-links">
+            <a href="https://github.com/utkarsh-raut" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Skills (Learning)</h2>
+    <!-- SKILLS -->
+    <section class="section reveal" id="skills">
+      <h2>Skills</h2>
       <div class="skills">
         <span>C</span>
         <span>Linux</span>
@@ -47,6 +97,18 @@
         <span>JavaScript</span>
       </div>
     </section>
+
+    <!-- CONTACT -->
+    <section class="section reveal" id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-box">
+        <p><b>Email:</b> <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+        <p><b>GitHub:</b> <a href="https://github.com/utkarsh-raut" target="_blank">github.com/utkarsh-raut</a></p>
+        <p><b>LinkedIn:</b> <a href="#" target="_blank">Add your LinkedIn</a></p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
